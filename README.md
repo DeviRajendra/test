@@ -2,6 +2,26 @@ Visual Studio Code (VS Code) is a highly versatile and popular code editor among
 
 ---
 
+def get_model(model_name, num_classes):
+    if model_name == "mobilenet_v2":
+        model = mobilenet_v2(pretrained=True)
+        model.classifier[1] = nn.Linear(model.last_channel, num_classes)
+    elif model_name == "efficientnet_b0":
+        model = efficientnet_b0(pretrained=True)
+        model.classifier[1] = nn.Linear(model.classifier[1].in_features, num_classes)
+    elif model_name == "resnet18":
+        model = resnet18(pretrained=True)
+        model.fc = nn.Linear(model.fc.in_features, num_classes)
+    elif model_name == "densenet121":
+        model = densenet121(pretrained=True)
+        model.classifier = nn.Linear(model.classifier.in_features, num_classes)
+    elif model_name == "squeezenet1_0":
+        model = squeezenet1_0(pretrained=True)
+        model.classifier[1] = nn.Conv2d(512, num_classes, kernel_size=(1, 1), stride=(1, 1))
+    else:
+        raise ValueError(f"Unknown model name: {model_name}")
+    return model
+
 ## ### **Essential Python Extensions for VS Code**
 
 ### 1. **Python (by Microsoft)**
