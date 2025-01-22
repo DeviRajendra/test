@@ -213,6 +213,8 @@ Visual Studio Code (VS Code) is a highly versatile and popular code editor among
 
 ## ### **Conclusion**
 
+https://drive.google.com/file/d/15uTJbJquBnG9tHqeSa61MLXXv7S6HZOR/view?usp=sharing
+
 VS Code's extensive ecosystem of extensions can greatly enhance your Python development experience and overall productivity. By carefully selecting and configuring the right extensions, you can tailor the editor to fit your specific needs, whether you're working on machine learning projects, web development, data analysis, or general programming tasks. Experiment with different extensions to find the combination that best supports your workflow and helps you become a more efficient and effective developer.
 
 If you need more specific recommendations based on your projects or have any other questions, feel free to ask!
